@@ -41,6 +41,7 @@ function Home() {
     <div className="py-20 sm:p-20 flex justify-evenly flex-wrap gap-16">
       {movies.map((m, index) => (
         <MovieCard
+          key={index}
           id={m.id}
           name={m.movie}
           image={m.image}

@@ -31,6 +31,7 @@ function Favorites() {
       {movies.map((m, index) =>
         favs.find((i) => i == m.id) ? (
           <MovieCard
+            key={index}
             id={m.id}
             name={m.movie}
             image={m.image}

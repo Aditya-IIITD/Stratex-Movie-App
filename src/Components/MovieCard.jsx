@@ -23,7 +23,7 @@ function MovieCard({ id, name, rating, image, imdb_url }) {
   }
   return (
     <div
-      className={`min-h-[130px] w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12 p-4 flex flex-col justify-between gap-3 rounded shadow-lg ${Style.card}`}
+      className={`min-h-[130px] w-7/12  sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12 p-4 flex flex-col justify-between gap-3 rounded shadow-lg ${Style.card}`}
       //   onClick={() => {
       //     window.open(imdb_url);
       //   }}

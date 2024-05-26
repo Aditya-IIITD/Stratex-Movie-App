@@ -7,7 +7,6 @@ export const fetchMovies = createAsyncThunk(
     const response = await fetch(`${process.env.REACT_APP_MOVIE_URL}`);
     const data = await response.json();
     data.sort((a, b) => b.rating - a.rating);
-    console.log("inside thunk: ", data);
     return data;
   }
 );
