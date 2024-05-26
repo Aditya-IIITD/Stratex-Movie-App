@@ -1,0 +1,9 @@
+.nofavs {
+  transition: 0.2s;
+}
+
+.nofavs:hover {
+  background-color: #5948f3;
+  transition: 0.2s;
+  transform: scale(1.05);
+}

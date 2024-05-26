@@ -1,7 +1,9 @@
-import Home from "./Components/Home";
+import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Favorites from "./Components/FavoriteMovies";
+import Favorites from "./Pages/FavoriteMovies";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const routes = createBrowserRouter([
@@ -23,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={routes} />
+      <ToastContainer />
     </div>
   );
 }

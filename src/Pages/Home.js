@@ -6,7 +6,9 @@ import {
   loadingSelector,
   errorSelector,
 } from "../Redux/MovieSlice";
-import MovieCard from "./MovieCard";
+import MovieCard from "../Components/MovieCard";
+import { ThreeDots } from "react-loader-spinner";
+import { toast } from "react-toastify";
 
 function Home() {
   const movies = useSelector(movieSelector);
@@ -18,11 +20,22 @@ function Home() {
   }, []);
 
   if (loading) {
-    return <div>loading...</div>;
+    return (
+      <div className=" text-center flex justify-center mt-[200px]">
+        <ThreeDots color="#5948f3" />
+      </div>
+    );
   }
 
   if (error) {
-    return <div>error while fetching movies: {error}</div>;
+    return (
+      <div className="mt-[100px] flex justify-center items-center gap-6 flex-wrap flex-col">
+        <img src="https://cdn-icons-png.flaticon.com/128/6639/6639444.png" />
+        <p className="text-xl font-bold text-gray-500">
+          Error while fetching movies: {error}
+        </p>
+      </div>
+    );
   }
   return (
     <div className="py-20 sm:p-20 flex justify-evenly flex-wrap gap-16">

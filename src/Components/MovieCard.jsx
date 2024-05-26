@@ -3,15 +3,19 @@ import Style from "../Styles/Moviecard.module.css";
 import { movieActions, LikedMovieSelector } from "../Redux/MovieSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { toast } from "react-toastify";
 function MovieCard({ id, name, rating, image, imdb_url }) {
   const favs = useSelector(LikedMovieSelector);
   const dispatch = useDispatch();
   let liked = false;
   const addToFav = () => {
+    toast.success("Movie added to favorites");
+
     dispatch(movieActions.likeMovie(id));
   };
 
   const removeFromFav = () => {
+    toast.info("Movie removed from favorites");
     dispatch(movieActions.unlikeMovie(id));
   };
   if (favs.findIndex((i) => i == id) >= 0) {
