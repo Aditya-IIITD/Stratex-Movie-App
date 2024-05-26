@@ -10,8 +10,8 @@ https://drive.google.com/file/d/1tsFH9HHcEVdFAekRjqq3wQ0Um6_q192d/view?usp=shari
 
 The dummy movie API is not giving proper URLs for the images of the movies. The image paths returned are in the format "images/shawshank.jpg", which do not include the full URL required to display the images correctly. Because of which images are not rendered for movies.
 
-CSS styling : tailwind
-State Management: Redux toolkit
+CSS styling : tailwind <br/>
+State Management: Redux toolkit <br/>
 Deployed on Vercel: https://stratex-movie-app.vercel.app/
 
 # Redux:
