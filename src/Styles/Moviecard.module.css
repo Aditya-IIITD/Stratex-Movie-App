@@ -1,0 +1,25 @@
+.card {
+  transition: 0.2s;
+}
+
+.card:hover {
+  transition: 0.2s;
+  transform: scale(1.02);
+  cursor: default;
+}
+.btnImg {
+  transition: 0.3s;
+}
+.btnImg:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.visitBtn {
+  transition: 0.2s;
+}
+.visitBtn:hover {
+  transition: 0.2s;
+  background-color: #5948f3;
+  transform: scale(1.05);
+}
