@@ -4,7 +4,7 @@ https://stratex-movie-app.vercel.app/
 
 # Demo Video Link:
 
-https://drive.google.com/file/d/1tsFH9HHcEVdFAekRjqq3wQ0Um6_q192d/view?usp=sharing
+https://drive.google.com/file/d/1tbocDaA14gs2AgHOKzWn9uPjVhF940to/view?usp=sharing
 
 # note:
 
