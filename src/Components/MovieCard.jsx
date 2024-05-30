@@ -17,6 +17,7 @@ function MovieCard({ id, name, rating, image, imdb_url }) {
 
   const removeFromFav = () => {
     toast.info("Movie removed from favorites");
+
     //removing from the local storage
     const data = favs.filter((id) => id != id);
     localStorage.setItem("favorites", data);
