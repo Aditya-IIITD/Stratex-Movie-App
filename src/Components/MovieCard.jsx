@@ -10,12 +10,16 @@ function MovieCard({ id, name, rating, image, imdb_url }) {
   let liked = false;
   const addToFav = () => {
     toast.success("Movie added to favorites");
-
+    //adding to local storage
+    localStorage.setItem("favorites", [...favs, id]);
     dispatch(movieActions.likeMovie(id));
   };
 
   const removeFromFav = () => {
     toast.info("Movie removed from favorites");
+    //removing from the local storage
+    const data = favs.filter((id) => id != id);
+    localStorage.setItem("favorites", data);
     dispatch(movieActions.unlikeMovie(id));
   };
   if (favs.findIndex((i) => i == id) >= 0) {

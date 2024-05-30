@@ -21,6 +21,9 @@ const movieslice = createSlice({
   name: "Movie",
   initialState: initialState,
   reducers: {
+    setFavs: (state, action) => {
+      state.favs = [...action.payload];
+    },
     likeMovie: (state, action) => {
       state.favs.push(action.payload);
     },

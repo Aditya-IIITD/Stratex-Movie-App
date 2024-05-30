@@ -5,6 +5,7 @@ import {
   fetchMovies,
   loadingSelector,
   errorSelector,
+  movieActions,
 } from "../Redux/MovieSlice";
 import MovieCard from "../Components/MovieCard";
 import { ThreeDots } from "react-loader-spinner";
@@ -15,8 +16,12 @@ function Home() {
   const loading = useSelector(loadingSelector);
   const error = useSelector(errorSelector);
   const dispatch = useDispatch();
+
   useEffect(() => {
     if (movies.length == 0) dispatch(fetchMovies());
+    const data = localStorage.getItem("favorites");
+    // console.log("favs", data);
+    dispatch(movieActions.setFavs(data));
   }, []);
 
   if (loading) {
