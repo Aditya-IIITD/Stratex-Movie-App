@@ -19,9 +19,9 @@ function Home() {
 
   useEffect(() => {
     if (movies.length == 0) dispatch(fetchMovies());
-    // const data = localStorage.getItem("favorites");
+    const data = localStorage.getItem("favorites") || [];
     // console.log("favs", data);
-    // dispatch(movieActions.setFavs(data));
+    dispatch(movieActions.setFavs(data));
   }, []);
 
   if (loading) {
